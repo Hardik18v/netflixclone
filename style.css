@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  outline: black;
+}
+body {
+  background-color: #222;
+}
+/* Home */
+
+/* Navbar */
+nav .nav-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+}
+
+nav .nav-con .nav-left img {
+  width: 130px;
+}
+nav .nav-con .nav-right button {
+  background-color: #e50914;
+  padding: 8px 22px;
+  letter-spacing: 0.3px;
+  border-radius: 3px;
+  font-size: 1em;
+  color: white;
+  border: none;
+}
+nav .nav-con .nav-right button:first-child {
+  background-color: white;
+  color: black;
+  margin-right: 10px;
+}
+
+/* Home section*/
+section.home {
+  height: 93vh;
+  background: url("./img/banner.jpg"), rgba(0, 0, 0, 0.829);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center/center;
+  margin-bottom: 8px;
+}
+
+.home .home-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 70%;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.home .home-con h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.home .home-con h3 {
+  font-size: 1em;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+.form-con {
+  margin-top: 10px;
+}
+
+#text-input {
+  border-radius: 10px;
+  border: none;
+  padding: 15px 250px 15px 15px;
+  font-size: 0.6em;
+}
+
+#submit-btn {
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px 14px 25px;
+  font-size: 0.8em;
+  background-color: #e50914;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+/* Detail boxes*/
+
+div.detail-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  background-color: black;
+}
+div.detail-box h1 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 3em;
+}
+div.detail-box img {
+  width: 100%;
+}
+div.detail-box p {
+  font-size: 1.3em;
+  font-weight: 100;
+}
+#reverse-col {
+  order: 2;
+}
+
+/* question section */
+section.question-sec {
+  background-color: black;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+}
+section.question-sec h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.question-sec details {
+  background-color: rgb(59, 59, 59);
+  margin: 0 200px;
+  font-size: 1.7em;
+  padding: 20px 30px;
+  font-weight: 200;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.question-sec details p {
+  font-size: 0.7em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* On small screen */
+
+@media (max-width: 1000px) {
+  div.detail-box h1 {
+    font-size: 2em;
+  }
+  div.detail-box p {
+    font-size: 1.2em;
+  }
+  .question-sec details {
+    margin: 5px 10px;
+  }
+  section.question-sec h1 {
+    font-size: 2.5em;
+  }
+  .question-sec details {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 700px) {
+  div.detail-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  div.detail-box img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  div.detail-box-text {
+    padding: 0 5%;
+    margin-bottom: 10px;
+  }
+  #reverse-col {
+    order: 0;
+  }
+
+  .home .home-con h1 {
+    font-size: 1.5em;
+  }
+
+  .home .home-con h3 {
+    font-size: 0.7em;
+  }
+
+  #text-input {
+    padding: 12px 100px 12px 10px;
+    font-size: 0.5em;
+  }
+
+  #submit-btn {
+    padding: 8px 15px 11px 15px;
+    font-size: 0.7em;
+  }
+  nav .nav-con .nav-right button {
+    padding: 5px 15px;
+    font-size: 1em;
+    margin-top: -500px;
+  }
+  nav .nav-con .nav-left img {
+    width: 110px;
+  }
+}
+@media (max-width: 400px) {
+  div.detail-box h1 {
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+  div.detail-box p {
+    font-size: 1em;
+    letter-spacing: 0.2px;
+  }
+  .home .home-con h1 {
+    font-size: 1.2em;
+  }
+  .home .home-con h3 {
+    font-size: 0.6em;
+  }
+  .home .home-con {
+    margin: 0 10px;
+  }
+  nav .nav-con .nav-right button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+  nav .nav-con .nav-left img {
+    width: 110px;
+  }
+  nav .nav-con {
+    padding: 25px 10px;
+  }
+}
+
+/* For big screens */
+
+@media (min-width: 1600px) {
+  .home .home-con {
+    font-size: 2.5em;
+  }
+  div.detail-box h1 {
+    font-size: 6em;
+  }
+  div.detail-box p {
+    font-size: 3em;
+    font-weight: 100;
+  }
+}
